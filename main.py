@@ -3,18 +3,16 @@ import raleys_api
 import target_api
 import pyrebase
 import asyncio
+import json
 
 
-firebaseConfig = {
-    "apiKey": "AIzaSyAdjEwdx-NqPxn3PcS7Eq1TvPPnF0igy1U",
-    "authDomain": "ucentials-dev.firebaseapp.com",
-    "databaseURL": "https://ucentials-dev-default-rtdb.firebaseio.com",
-    "projectId": "ucentials-dev",
-    "storageBucket": "ucentials-dev.appspot.com",
-    "messagingSenderId": "469291886700",
-    "appId": "1:469291886700:web:bb200805573c7cd2ed5049",
-    "measurementId": "G-631JFGRJ1B"
-}
+with open('keys.json', 'r') as file:
+    data = file.read()
+    keys = json.loads(data)
+    firebaseConfig = keys["firebaseConfig"]
+    file.close
+
+
 firebase = pyrebase.initialize_app(firebaseConfig)
 db = firebase.database()
 
