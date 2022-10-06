@@ -111,8 +111,6 @@ def send_request(id):
         "authority": "sameday.costco.com",
         "accept": "application/json, text/plain, */*",
         "accept-language": "en-US,en;q=0.9",
-        "authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2Vyc2Vzc2lvbl9pZCI6OTAyODk3NjMsInVzZXJfaWQiOjI2OTUzOTM0LCJhZG1pbnVzZXJfaWQiOm51bGwsImFub255bW91cyI6dHJ1ZSwiaWF0IjoxNjYzMTk1NjQ3fQ.X_zVOBSGSRPvB-yXRKRlapiaFbb0Ut4k9jImrKFMtc0",
-        "cookie": "__stripe_mid=66c82381-a9c9-4944-b46e-3d399b56fe1119ff4d; OptanonConsent=isGpcEnabled=1&datestamp=Fri+Sep+16+2022+22^%^3A22^%^3A02+GMT-0700+(Pacific+Daylight+Time)&version=6.35.0&hosts=&consentId=e788ac5a-d8bf-40d9-9080-58813449cc2b; __stripe_sid=c740637c-fbb4-4cfd-827b-acaee8f5e220041bd7",
         "referer": f"https://sameday.costco.com/shop/categories/{id}",
         "sec-ch-ua": "^\^Google"
     }

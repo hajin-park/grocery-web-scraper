@@ -90,7 +90,6 @@ def send_request(id):
         "Accept": "application/json, text/plain, */*",
         "Accept-Language": "en-US,en;q=0.9",
         "Connection": "keep-alive",
-        "Cookie": "gig_bootstrap_3_GKrrAPXlGczVrnHfPGZmmUeR7ANOjp5s_fPs142vSSeUf_SVNfdAA11jS5mhdWKo=login_ver4; gig_canary=false; gig_bootstrap_3_Tikef4yXIbKNr4dyPwM27hHXXPJDmg2vn3kJgkBOG8WpYu9P_rGd6tz883airYyj=login_ver4; _dd_r=1; _dd=5123d3cb-afa1-4e01-a9fe-d530a081e810; TS01363ad3=01bcf4b49ffee783169be68db584d4889d00987523807b0429f985265f593dc4979c0470a8c0471c28dbb3faa98b8285c0ed70802d; gig_canary_ver=13394-3-27719925; session-ray=.eJxNjMlugzAARP_F5zQyDokEN0QralITlUAgvVgsjmwWgzBOg6v-e6l66WEub97MF6C3iSkO3FvRKbYBdGRTX0gmZ-DOk16JYkqJQdJ5aJkELmBLyMugEicR4tRgKxKhs12hVaHLssZUqLuXnTN--PhAGmyiJl2IwfDN_3Ny1LW4GSzy7BmSYEiWT3HN4rnI9v_6UdfZQ60bXvaOZpl1r3MiTjJe6ixVuO94_fufXBFpKpsYD0YSbrlvbNSH-RnGR3rWQTu3ATuwxHul748XrX1O7BAVxyeCwQZoxSYqauDuIdxZyN59_wAwXFt1.FgPutQ.b8q-WJQgs2h-FThnJagt3Nz2jI0; TS014dd9f8=01bcf4b49f895b5f47bec798699889a5c77c80528e0f113bd1be3f90a4ac398a0f2a4db80cf3f9d2036bc936a9ddc4fa77402d2c8b67d5a9eacfb0017c623b486133969675",
         "Referer": f"https://shop.raleys.com/shop/categories/{id}",
         "Sec-Fetch-Dest": "empty",
         "Sec-Fetch-Mode": "cors",
