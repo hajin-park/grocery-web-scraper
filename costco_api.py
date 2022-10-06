@@ -17,6 +17,7 @@ other_departments = {
     "Kirkland Signature": 107,
     "Lawn & Garden": 204,
     "Office Products": 12,
+    "Paper Products & Food Storage": 36,
     "Pets": 25,
     "Small Appliances": 215,
     "Sporting Goods": 196,
@@ -35,7 +36,6 @@ departments = {
     "Frozen Foods": 95,
     "Meat & Seafood": 4,
     "Pantry & Dry Goods": 6,
-    "Paper Products & Food Storage": 36,
     "Produce": 45,
     "Snacks, Candy & Nuts": 40
 }
