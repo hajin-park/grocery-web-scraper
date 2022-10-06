@@ -148,7 +148,7 @@ async def retrieve_data(id):
 
             unit_price, unit = calculate_unit_price(
                 product_name, size_string, unit, base_price, unit_price)
-            today = date.today().strftime("%B %D, %Y")
+            today = date.today().strftime("%D")
             product_data = {
                 'department': department,
                 'category': category,

@@ -83,7 +83,7 @@ async def retrieve_data(id):
                 product_name = product["item"]["product_description"]["title"]
                 base_price = float(
                     product["price"]["formatted_current_price"][1:])
-                today = date.today().strftime("%B %D, %Y")
+                today = date.today().strftime("%D")
 
                 product_data = {
                     'department': department,
@@ -101,8 +101,12 @@ async def retrieve_data(id):
 async def retrieve_categories(id):
     try:
         request = await asyncio.to_thread(send_request, id, 0)
-        facet = request["data"]["search"]["search_response"]["facet_list"][0]["options"]
-        ids = [item["value"] for item in facet]
+        facet_list = request["data"]["search"]["search_response"]["facet_list"]
+        for list in facet_list:
+            if list["facet_id"] == "d_categorytaxonomy":
+                options = list["options"]
+                break
+        ids = [option["value"] for option in options]
         await asyncio.gather(*[retrieve_data(id) for id in ids])
     except Exception:
         print(f"Skipping {id}")
