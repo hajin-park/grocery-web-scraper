@@ -3,22 +3,22 @@ import requests
 import asyncio
 import json
 
-# other_departments = {
-#     "Auto Accessories": 15,
-#     "Babies": 23,
-#     "Books": 188,
-#     "Cleaning & Laundry Products": 77,
-#     "Computers": 217,
-#     "Electronics": 30,
-#     "Health & Personal Care": 8,
-#     "Home Improvement": 200,
-#     "Housewares": 213,
-#     "Lawn & Garden": 204,
-#     "Office Products": 12,
-#     "Small Appliances": 215,
-#     "Sporting Goods": 196,
-#     "Toys & Seasonal": 198
-# }
+other_departments = {
+    "Auto Accessories": 15,
+    "Babies": 23,
+    "Books": 188,
+    "Cleaning & Laundry Products": 77,
+    "Computers": 217,
+    "Electronics": 30,
+    "Health & Personal Care": 8,
+    "Home Improvement": 200,
+    "Housewares": 213,
+    "Lawn & Garden": 204,
+    "Office Products": 12,
+    "Small Appliances": 215,
+    "Sporting Goods": 196,
+    "Toys & Seasonal": 198
+}
 
 departments = {
     "Alcohol": 18,
