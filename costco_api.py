@@ -6,6 +6,7 @@ import json
 other_departments = {
     "Auto Accessories": 15,
     "Babies": 23,
+    "Bed & Bath": 211,
     "Books": 188,
     "Cleaning & Laundry Products": 77,
     "Computers": 217,
@@ -16,6 +17,7 @@ other_departments = {
     "Kirkland Signature": 107,
     "Lawn & Garden": 204,
     "Office Products": 12,
+    "Pets": 25,
     "Small Appliances": 215,
     "Sporting Goods": 196,
     "Toys & Seasonal": 198
@@ -24,7 +26,6 @@ other_departments = {
 departments = {
     "Alcohol": 18,
     "Bakery & Desserts": 21,
-    "Bed & Bath": 211,
     "Beverages": 48,
     "Breakfast": 115,
     "Canned Goods": 27,
@@ -35,7 +36,6 @@ departments = {
     "Meat & Seafood": 4,
     "Pantry & Dry Goods": 6,
     "Paper Products & Food Storage": 36,
-    "Pets": 25,
     "Produce": 45,
     "Snacks, Candy & Nuts": 40
 }
