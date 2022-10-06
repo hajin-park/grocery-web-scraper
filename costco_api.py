@@ -13,6 +13,7 @@ other_departments = {
     "Health & Personal Care": 8,
     "Home Improvement": 200,
     "Housewares": 213,
+    "Kirkland Signature": 107,
     "Lawn & Garden": 204,
     "Office Products": 12,
     "Small Appliances": 215,
@@ -31,7 +32,6 @@ departments = {
     "Dairy & Eggs": 63,
     "Deli": 1,
     "Frozen Foods": 95,
-    "Kirkland Signature": 107,
     "Meat & Seafood": 4,
     "Pantry & Dry Goods": 6,
     "Paper Products & Food Storage": 36,
@@ -159,6 +159,7 @@ async def retrieve_data(id):
             }
 
             update_json_object(product_data)
+
     except Exception:
         pass
 

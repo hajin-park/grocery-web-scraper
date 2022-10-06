@@ -21,6 +21,7 @@ departments = {
 units_of_measurement = ['oz', 'fl oz', 'qt', 'qts', 'lb',
                         'lbs', 'ct', 'l', 'each', 'ct', 'gal', 'pk']
 blacklisted_units = ['by', 'load', 'previously', 'frozen', '"', "'"]
+blacklisted_categories = ["Baby Store"]
 raleys_data = {}
 
 
@@ -73,6 +74,9 @@ def calculate_unit_price(
 def update_json_object(product_data):
     department = product_data['department'].replace('/', 'and')
     category = product_data['category'].replace('/', 'and')
+
+    if category in blacklisted_categories:
+        return
 
     try:
         raleys_data[department][category].append(product_data)
