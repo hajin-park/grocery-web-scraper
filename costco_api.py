@@ -3,22 +3,22 @@ import requests
 import asyncio
 import json
 
-other_departments = {
-    "Auto Accessories": 15,
-    "Babies": 23,
-    "Books": 188,
-    "Cleaning & Laundry Products": 77,
-    "Computers": 217,
-    "Electronics": 30,
-    "Health & Personal Care": 8,
-    "Home Improvement": 200,
-    "Housewares": 213,
-    "Lawn & Garden": 204,
-    "Office Products": 12,
-    "Small Appliances": 215,
-    "Sporting Goods": 196,
-    "Toys & Seasonal": 198
-}
+# other_departments = {
+#     "Auto Accessories": 15,
+#     "Babies": 23,
+#     "Books": 188,
+#     "Cleaning & Laundry Products": 77,
+#     "Computers": 217,
+#     "Electronics": 30,
+#     "Health & Personal Care": 8,
+#     "Home Improvement": 200,
+#     "Housewares": 213,
+#     "Lawn & Garden": 204,
+#     "Office Products": 12,
+#     "Small Appliances": 215,
+#     "Sporting Goods": 196,
+#     "Toys & Seasonal": 198
+# }
 
 departments = {
     "Alcohol": 18,
@@ -109,10 +109,11 @@ def send_request(id):
     querystring = {"category_id": f"{id}", "limit": "10000"}
     headers = {
         "authority": "sameday.costco.com",
+        "cookie": "__cin=true; session-prd-costco-us=.eJxNzbtugzAAheF38RxFGGQi2NrQEDsFhMqlsFg2GGHCTRhKoeq7l7HDWb4z_D-AVpNQNbAr1ipxAnQUU8d60c_AnqflECWUkkNP5-EpemADsZGau4UMJMHxjqEviXU-EBZ6sh3bC7394q015ldsBlG4-VGmeztWuE_2_JNULA1l0ODDXgzPiY33K6lzF478_98hyN1V4e62cB0hnlqw2LBZ3gnMP1bJ0puGm-Hbb7LNazLNOxpVeF6jpxMzOsbJIqxWFY-315oYrlP6lnAztMQE-SZnQUc9cAKLEhOVJbB109AuGrr8_gGGV1qs.Fh-y3Q.oXcRUwDLJuMFrBZS0jVdOoxPxXc",
         "accept": "application/json, text/plain, */*",
         "accept-language": "en-US,en;q=0.9",
         "referer": f"https://sameday.costco.com/shop/categories/{id}",
-        "sec-ch-ua": "^\^Google"
+        "sec-ch-ua": "^\^Chromium^^;v=^\^106^^, ^\^Google"
     }
 
     response = requests.request(
