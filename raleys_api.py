@@ -77,14 +77,11 @@ def update_json_object(product_data):
 
     if category in blacklisted_categories:
         return
-
-    try:
-        raleys_data[department][category].append(product_data)
-    except KeyError:
-        try:
-            raleys_data[department][category] = [product_data]
-        except KeyError:
-            raleys_data[department] = {category: [product_data]}
+    if raleys_data.setdefault(department, {category: [product_data]}) == {category: [product_data]}:
+        return
+    if raleys_data[department].setdefault(category, [product_data]) == [product_data]:
+        return
+    raleys_data[department][category].append(product_data)
 
 
 def send_request(id):

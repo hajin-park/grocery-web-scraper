@@ -2,6 +2,7 @@ from datetime import date
 import requests
 import asyncio
 import json
+import re
 
 other_departments = {
     "Auto Accessories": 15,
@@ -95,13 +96,11 @@ def update_json_object(product_data):
     department = product_data['department'].replace('/', 'and')
     category = product_data['category'].replace('/', 'and')
 
-    try:
-        costco_data[department][category].append(product_data)
-    except KeyError:
-        try:
-            costco_data[department][category] = [product_data]
-        except KeyError:
-            costco_data[department] = {category: [product_data]}
+    if costco_data.setdefault(department, {category: [product_data]}) == {category: [product_data]}:
+        return
+    if costco_data[department].setdefault(category, [product_data]) == [product_data]:
+        return
+    costco_data[department][category].append(product_data)
 
 
 def send_request(id):
@@ -174,6 +173,7 @@ async def main():
         json_string = json.dumps(costco_data, indent=2)
         file.write(json_string)
         file.close
+
     print("Costco DONE")
 
 

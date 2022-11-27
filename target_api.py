@@ -28,13 +28,11 @@ def update_json_object(product_data):
     department = product_data['department'].replace('/', 'and')
     category = product_data['category'].replace('/', 'and')
 
-    try:
-        target_data[department][category].append(product_data)
-    except KeyError:
-        try:
-            target_data[department][category] = [product_data]
-        except KeyError:
-            target_data[department] = {category: [product_data]}
+    if target_data.setdefault(department, {category: [product_data]}) == {category: [product_data]}:
+        return
+    if target_data[department].setdefault(category, [product_data]) == [product_data]:
+        return
+    target_data[department][category].append(product_data)
 
 
 def send_request(id, offset):
