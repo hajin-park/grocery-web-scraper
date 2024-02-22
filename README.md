@@ -1,4 +1,4 @@
-# Store-Inventory-API
+# Grocery Web Scraper
 Scrapes inventory data off of select stores using REST API
 
 ### Tracked stores (Merced only)
